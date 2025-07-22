@@ -32,6 +32,8 @@ header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 90%;
+  margin: auto;
 }
 
 .nav-left ul,
@@ -49,6 +51,7 @@ header .container {
   font-size: 1rem;
 }
 
+
 nav ul {
   list-style: none;
   display: flex;
@@ -60,6 +63,14 @@ nav a {
   text-decoration: none;
   font-weight: bold;
 }
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+}
+
 
 main {
   padding-top: 100px;
@@ -105,35 +116,41 @@ main {
 
 .discount, .eco {
   position: absolute;
-  bottom: 10px;
-  left: 0;
   background-color: red;
   color: white;
   padding: 5px 10px;
   font-size: 0.8rem;
   font-weight: bold;
   margin: 5px;
+  z-index: 2; /* ensure badges are above images */
+}
+
+.discount {
+  bottom: 10px;
+  left: 0;
 }
 
 .eco {
-  background-color: green;
-  left: auto;
+  bottom: 10px;
   right: 0;
+  background-color: green;
 }
 
 .heart {
   position: absolute;
   top: 10px;
   right: 10px;
-  color: black;
+  color: black;             /* colore di partenza */
   cursor: pointer;
   font-size: 1.5rem;
   transition: color 0.3s;
+  z-index: 2;
 }
 
 .heart:hover {
-  color: red;
+  color: red;               /* colore al passaggio del mouse */
 }
+
 
 .info {
   padding: 10px 0;
